@@ -1,0 +1,169 @@
+*{
+   margin: 0;
+    padding:0;
+}
+body{
+	background-color: gray;
+}
+.box{
+	width: 800px;
+	height: 280px;
+	margin:50px auto;
+}
+.box .link{
+	width: 150px;
+	height: 280px;
+	margin:0 40px;
+	float: left;
+}
+.link .icon{
+	width: 100%;
+	height:200px;
+	display: block;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+
+}
+.link .icon:hover{
+    -webkit-transform: rotate(360deg)  scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+    -ms-transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+    transform: rotate(360deg) scale(1.2);
+}
+.link-miss .icon{
+	background: url(../1.png) no-repeat center;
+
+}
+.link-play .icon{
+	background: url(../2.png) no-repeat center;
+}
+.link-touch .icon{
+	background: url(../3.png) no-repeat center;
+}
+.button{
+    padding-left: 20px;
+    width: 100%;
+    height: 30px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 30px;
+    font-family:"微软雅黑",Arial;
+    border: 2px solid rgba(255,255,255,0.3);
+    -webkit-box-sizing: boder-box;
+    -moz-box-sizing: boder-box;
+    box-sizing: boder-box;
+    background: url("../4.png") no-repeat 120px center;
+    position: relative;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.button:hover{
+    border:2px solid rgba(255,255,255,1);
+    background-position: 140px center;
+
+}
+.button .line{
+    display: block;
+    position: absolute;
+}
+.button .line-left{
+    width:0;
+    height:2px;
+    left: -100%;
+    top:-2px;
+    background-color: white;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.button:hover .line-left{
+    width: 100%;
+    left: 0;
+}
+.button .line-right{
+    width: 0;
+    height:2px;
+    right:-100%;
+    top:30px;
+    background-color: white;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+
+}
+.button:hover .line-right{
+    width: 100%;
+    right:0;
+}
+.button .line-top{
+    width: 2px;
+    height:0;
+    top:-100%;
+    right:-2px;
+    background-color: white;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.button:hover .line-top{
+    top: 0;
+    height:100%;
+}
+.button .line-bottom{
+    width:2px;
+    height:0;
+    bottom:-100%;
+    left:-2px;
+    background-color: white;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.button:hover .line-bottom{
+    bottom:0;
+    height:100%;
+}
+.box .tip{
+    position: absolute;
+    height:28px;
+    line-height: 28px;
+    font-size: 16px;
+    color: white;
+    background-color: darkseagreen;
+    padding:0 14px;
+    border-radius: 5px;
+    top: 300px;
+    margin:0 auto;
+    opacity:0;
+
+}
+.tip em{
+    font-style: normal;
+}
+.tip span{
+    display: block;
+    position: absolute;
+    width:0;
+    height:0;
+    border:7px solid transparent;
+    border-top-color: darkseagreen;
+    top:28px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="js/jquery-3.1.0.js"></script>
+    <link href="css/lianxi2.css" type="text/css" rel="stylesheet">
+    <title>Title</title>
+
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <div class="page page-1" id="page">
+                <span class="abc"></span>
+                <h2>欢喜</h2>
+                <p>笑口常开的好处多多，不仅延年益寿，还能养肺护心脏，想要身体更健康，一定要多笑。</p>
+
+            </div>
+            <div class="page page-2" id="page">
+                <span class="cba"></span>
+                <h2>愤怒</h2>
+                <p>愤怒常常会造成人与人之间的感情隔阂，不仅破坏感情，还会使人犯错误。</p>
+            </div>
+            <div class="page page-1" id="page">
+                <span class="abc"></span>
+                <h2>悲哀</h2>
+                <p>情绪低落会影响心情、食欲、身体健康，缺乏积极性、前冲力，甚至还会传染身边的人</p>
+            </div>
+            <div class="page page-2" id="page">
+                <span class="cba"></span>
+                <h2>快乐</h2>
+                <p>快乐是万能的，人只要一快乐就会忘掉所有烦恼。笑一笑十年少，所以我们要高兴，老年人经常快乐会延缓衰老,年轻人经常快乐会更加具有青春活力。</p>
+            </div>
+            <div class="page page-1" id="page">
+                <span class="abc"></span>
+                <h2></h2>
+                <p>人生百态,五味杂陈<br>什么事情都会经历的<br>只要有一颗勇敢的心<br>就能承受一切美好的与不美好的事情</p>
+            </div>
+
+        </div>
+        <div class="footer" id="footer">
+            <span></span>
+            <ul>
+                <li>欢喜</li>
+                <li>愤怒</li>
+                <li>悲哀</li>
+                <li>快乐</li>
+                <li>喜怒哀乐</li>
+            </ul>
+        </div>
+    </div>
+<script>
+    $(document).ready(function(){
+        $("li").click(function(){
+            var lleft=$(this).offset().left;
+            var sleft=($(".footer ul li").outerWidth())/2;
+            var a = lleft + sleft -30;
+            $(".footer span").css({"display":"block","left":a+"px"});
+            $(this).addClass("change").siblings().removeClass("change");
+            var b=$(this).index();
+            var c=b*800;
+            $("body").animate({"scrollTop":c+"px"},700);
+
+        })
+    })
+    onload = function() {
+        var lis =document.getElementById("footer").getElementsByTagName("li");
+        var ps =document.getElementById("page").getElementsByTagName("p");
+
+    }
+</script>
+</body>
+</html>

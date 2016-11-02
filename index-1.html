@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的简历</title>
+    <link href="css/style-1.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript"  src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="left">
+
+            <img src="src/1.jpg" >
+            <h1>个人简历</h1>
+            <span></span>
+            <h3>技能：CSS，HTML，JavaScript，JQuery等 </h3>
+        </div>
+        <div class="right">
+            <h2>基本信息</h2>
+            <ul class="wenzi">
+                <li>姓名：马静</li>
+                <li>出生年月：1994年10月</li>
+                <li>性别：女</li>
+
+                <li>毕业学校：沈阳师范大学</li>
+                <li>所在专业：软件工程</li>
+                <li>联系电话：15840393230</li>
+                <li>邮箱：790242050@qq.com</li>
+            </ul>
+            <h2>求职意向</h2>
+            <ul class="wenzi">
+                <li>求职意向：web前端开发</li>
+                <li>期望求职地点：天津</li>
+            </ul>
+            <h2>教育经历</h2>
+            <ul class="wenzi">
+                <li>学校：沈阳师范大学</li>
+                <li>专业：软件工程</li>
+                <li>时间：2013.09-至今</li>
+                <li>学历：本科</li>
+            </ul>
+            <div class="littlebox">
+                <ul class="little-left">
+                    <li class="little-top">获奖经历</li>
+                    <li class="little-bottom">工作经历</li>
+                </ul>
+                <ul class="little-right1" >
+                    <h2>获奖经历</h2>
+                    <li>沈阳师范大学软件学院学习三等奖学金 2014年9月</li>
+                    <li>沈阳师范大学软件学院学习二等奖学金 2015年9月</li>
+                    <li>沈阳师范大学软件学院学习二等奖学金 2016年9月</li>
+                </ul>
+                <ul class="little-right" style="display: none;">
+                    <h2>工作经历</h2>
+                    <li>本人为沈阳师范大学，软件工程专业大四的学生，积极参加学校组织的各种活动，暂无工作经验</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function(){
+        $(".little-bottom").hover(function(){
+            $(".little-right1").css({"display":"none"});
+            $(".little-right").css({"display":"block"})
+        }).mouseout(function(){
+            $(".little-right").css({"display":"none"});
+            $(".little-right1").css({"display":"block"})
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.content, .page{
+    height:800px;
+    width:100%;
+    position: relative;
+}
+.page{
+    overflow: hidden;
+    text-align: center;
+}
+.page span{
+    display: block;
+    width:350px;
+    height:350px;
+    position: absolute;
+    margin-left: 37%;
+    top:-25%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.page-1{
+    background-color: darkseagreen;
+    color: white;
+}
+.page-2{
+    background-color: white;
+    color: forestgreen;
+}
+.abc{
+    background-color: white;
+}
+.cba{
+    background-color: darkseagreen;
+}
+.page h2{
+    font-size:40px;
+    display: block;
+    margin-top:17%;
+}
+
+.page p{
+    font-size:30px;
+    display: block;
+    margin-top:10px;
+    height:50px;
+    line-height:50px;
+
+}
+.p1{
+    animation: shang 1s  linear;
+    animation-fill-mode :forwards;
+}
+@keyframes shang {
+    0%{ margin-top: -1000px;}
+    100%{ margin-top: 10px; }
+}
+
+
+.p2{
+    animation: zuo 1s  linear;
+    animation-fill-mode :forwards;
+}
+@keyframes zuo {
+    0%{ margin-left: -1000px;}
+    100%{ margin-left: 0%;}
+}
+
+
+
+
+.footer{
+    width:100%;
+    height:50px;
+    background-color: mediumseagreen;
+    position: fixed;
+    bottom: 0;
+}
+.footer span{
+    display: block;
+    width:0;
+    height:0;
+    border: 30px solid transparent;
+    border-bottom-color:forestgreen;
+    position: absolute;
+    bottom:50px;
+    display: none;
+
+
+}
+.footer ul li{
+    float: left;
+    width:20%;
+    height: 50px;
+    display: block;
+    color: white;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.footer ul li:hover{
+    background-color: seagreen;
+}
+.footer ul li.change{
+    background-color:forestgreen;
+}
+
+

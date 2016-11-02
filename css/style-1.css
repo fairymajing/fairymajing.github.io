@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: darkseagreen;
+}
+.box{
+    width:1000px;
+    background-color: plum;
+    margin:10px auto;
+}
+.right h2{
+    font-family: "微软雅黑";
+    color: teal;
+    margin-left: 20px;
+}
+
+.right{
+    width:60%;
+    float: left;
+    /*border:2px solid pink;*/
+    background-color:rgba(255,255,255,0.3);
+    border-radius: 40px;
+
+}
+.right .wenzi li{
+    font-family: "微软雅黑";
+    list-style: none;
+    margin:8px 50px;
+    color: darkslategrey;
+}
+.littlebox{
+    width:500px;
+    height:300px;
+    border:3px solid darkslategray;
+    margin:10px auto;
+}
+.little-left{
+    width:25%;
+    float: left;
+}
+.little-right{
+    width:75%;
+    float: left;
+}
+.littlebox .little-left li{
+    font-family: "微软雅黑";
+    list-style: none;
+    color: teal;
+    height:150px;
+    line-height:150px;
+    text-align: center;
+    border:1px solid darkslategray;
+    font-weight: bold;
+    font-size: 23px;
+}
+.littlebox .little-top:hover{
+    background-color: darkseagreen;
+    color: darkslategrey;
+}
+.littlebox .little-bottom:hover{
+    background-color: darkseagreen;
+    color: darkslategrey;
+}
+.littlebox .little-right li,.littlebox .little-right1 li{
+    font-family: "微软雅黑";
+    list-style: none;
+    margin:40px 0;
+    color: darkslategrey;
+}
+.little-right h2, .little-right1 h2{
+    font-family: "微软雅黑";
+    color: teal;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left{
+    width:30%;
+    float: left;
+    /*border: 2px solid darksalmon;*/
+}
+.left img{
+    margin:50px 50px 20px;
+}
+.left h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: teal;
+    text-align: center;
+    text-shadow: 0px 0px 9px darkslategray;
+    margin:100px auto 10px;
+}
+
+.left span{
+    display: block;
+    width:80%;
+    height: 6px;
+    margin: 20px auto 50px;
+    background-color:darkslategray;
+}
+.left h3{
+    display: block;
+    margin:5px 35px;
+    color: darkslategrey;
+
+}
