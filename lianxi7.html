@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标滑过</title>
+    <style type="text/css">
+        body{
+            background-color: mediumseagreen;
+            color: #fff;
+        }
+        .slide{
+            width: 1024px;
+            height: 140px;
+            margin: 100px auto;
+            padding: 20px;
+            border-bottom: 2px #fff solid;
+            position: relative;
+
+        }
+        .slide .slide_a{
+            width: 150px;
+            height: 100px;
+            background-color: #d1d1d1;
+            display: block;
+            float: left;
+            position: relative;
+            margin-right: 30px;
+        }
+
+        .text{
+            position: absolute;
+
+            right: -20px;
+            line-height: 100px;
+
+            opacity: 0;
+            transition:1s;
+
+
+        }
+
+        .slide .slide_a:hover .text{
+            right: 30%;
+            opacity: 1;
+            color: #000;
+
+        }
+    </style>
+</head>
+<body>
+<div class="slide">
+    <a href="" class="slide_a"><span class="text">哈哈哈</span></a>
+    <a href="" class="slide_a"><span class="text">嘻嘻嘻</span></a>
+
+</div>
+</body>
+</html>

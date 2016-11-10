@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css边框升级</title>
+    <style type="text/css">
+        body{
+            background-color: mediumseagreen;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .wrap{
+            width: 1024px;
+            margin: 0px auto;
+        }
+        .head{
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+        .content{
+            height: 800px;
+
+        }
+        .left{
+            width: 450px;
+            height: 800px;
+            float: left;
+        }
+        .right{
+            width: 574px;
+            height: 800px;
+            float: right;
+        }
+        .right_box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: #ccc;
+            opacity: 0.5;
+        }
+        .box_style{
+            width: 450px;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        .text{
+            width: 150px;
+            height: 30px;
+            float: left;
+            line-height: 30px;
+            font-size: 24px;
+        }
+        .slide_div{
+            width: 300px;
+            height: 30px;
+            float: right;
+            position: relative;
+            line-height: 30px;
+        }
+        .slide_item{
+            width: 300px;
+            height: 10px;
+            position: absolute;
+            top: 10px;
+            background-color: #ccc;
+            border-radius: 15px;
+            z-index:1;
+        }
+        .slide_bar{
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            top: 5px;
+            left: 0px;
+            background-color: #999;
+            border-radius: 15px;
+            z-index:2;
+        }
+        .slide_bar_zhong{
+            width: 50px;
+            height: 20px;
+            position: absolute;
+            top: 5px;
+            left: 150px;
+            background-color: #999;
+            border-radius: 15px;
+            z-index:2;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="head">
+        <h1>我的css生成器</h1>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="box_style">
+                <div class="text"><span>圆角：</span></div>
+                <div class="slide_div">
+                    <div class="slide_bar" id="slide_bar"></div>
+                    <div class="slide_item" id="slide_item"></div>
+                </div>
+            </div>
+            <div class="box_style">
+                <div class="text"><span>透明度：</span></div>
+                <div class="slide_div">
+                    <div class="slide_bar_zhong" id="slide_bar_op"></div>
+                    <div class="slide_item" id="slide_item_op"></div>
+                </div>
+            </div>
+            <div class="box_style">
+                <div class="text"><span>背景颜色：</span></div>
+                <div class="slide_div">
+                    <input type="color" name="bg_color" id="bgcolor" onchange="color_range()" />
+                </div>
+            </div>
+            <div class="box_style">
+                <div class="text"><span>边框:</span></div>
+                <div class="slide_div">
+                    <select id="border_select" >
+                        <option selected="selected">none</option>
+                        <option>dotted</option>
+                        <option>solid</option>
+                        <option>double</option>
+                        <option>dashed</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box_style">
+                <div class="text"><span>元素大小：</span></div>
+                <div class="slide_div">
+                    <div class="slide_bar_zhong" id="slide_bar_scale"></div>
+                    <div class="slide_item" id="slide_item_scale"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_box" id="right_box"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    /*改变元素大小方法start*/
+    var slide_bar_scale=document.getElementById("slide_bar_scale");
+    var flag_scale=false;
+    var slide_item_scale=document.getElementById("slide_item_op");
+    var slide_item_scale_left=slide_item_scale.getBoundingClientRect().left;
+
+    var cha_scale;
+    var left_now_scale;
+
+    slide_bar_scale.onmousedown=function(e){
+        flag_scale=true;
+
+
+        document.onmousemove=function(e){
+
+            // console.log(left);
+            if(flag_scale){
+                slide_scale(e);
+            }
+        }
+
+
+        document.onmouseup=function(){
+            flag_scale=false;
+
+
+        }
+        return false;
+
+    }
+
+    function slide_scale(e){
+
+        left_now_scale=e.clientX;
+
+        cha_scale=left_now_scale-slide_item_scale_left;
+
+        if(cha_scale>=0&&cha_scale<=250){
+            slide_bar_scale.style.left=cha_scale+"px";
+            right_box.style.transform="scale("+cha_scale*2/250+")";
+
+        }else if(cha_scale<0){
+            slide_bar_scale.style.left=0+"px";
+            right_box.style.transform="scale(0)";
+        }else{
+            slide_bar_scale.style.left=250+"px";
+            right_box.style.transform="scale(2)";
+        }
+    }
+    /*改变元素大小方法end*/
+    /*边框选择start*/
+
+    var border_select=document.getElementById("border_select");
+    border_select.onchange=function(){
+        switch(this.selectedIndex){
+            case 0:right_box.style.border="10px #121314 none";break;
+            case 1:right_box.style.border="10px #121314 dotted";break;
+            case 2:right_box.style.border="10px #121314 solid";break;
+            case 3:right_box.style.border="10px #121314 double";break;
+            case 4:right_box.style.border="10px #121314 dashed";break;
+
+        }
+
+    }
+    /*边框选择end*/
+
+    /*改变元素背景颜色方法start*/
+    function color_range(){
+        var bgcolor=document.getElementById("bgcolor");
+        var bgcolor_value=bgcolor.value;
+        right_box.style.backgroundColor=bgcolor_value;
+    }
+    /*改变元素背景颜色方法end*/
+
+
+    /*改变元素圆角方法start*/
+    var slide_bar=document.getElementById("slide_bar");
+    var flag=false;
+    var slide_item=document.getElementById("slide_item");
+    var slide_item_left=slide_item.getBoundingClientRect().left;
+
+    var cha;
+    var left_now;
+    var right_box=document.getElementById("right_box");
+    slide_bar.onmousedown=function(e){
+        flag=true;
+
+
+        document.onmousemove=function(e){
+
+            // console.log(left);
+            if(flag){
+                slide_radius(e);
+            }
+        }
+
+
+        document.onmouseup=function(){
+            flag=false;
+
+
+        }
+        return false;
+
+    }
+
+    function slide_radius(e){
+
+        left_now=e.clientX;
+
+        cha=left_now-slide_item_left;
+        if(cha>=0&&cha<=250){
+            slide_bar.style.left=cha+"px";
+            right_box.style.borderRadius=cha/5+"px";
+        }else if(cha<0){
+            slide_bar.style.left=0+"px";
+            right_box.style.borderRadius=0+"px";
+        }else{
+            slide_bar.style.left=250+"px";
+            right_box.style.borderRadius=50+"px";
+        }
+    }
+    /*改变元素圆角方法end*/
+
+    /*改变元素透明度方法start*/
+    var slide_bar_op=document.getElementById("slide_bar_op");
+    var flag_op=false;
+    var slide_item_op=document.getElementById("slide_item_op");
+    var slide_item_op_left=slide_item_op.getBoundingClientRect().left;
+
+    var cha_op;
+    var left_now_op;
+
+    slide_bar_op.onmousedown=function(e){
+        flag_op=true;
+
+
+        document.onmousemove=function(e){
+
+            // console.log(left);
+            if(flag_op){
+                slide_opcity(e);
+            }
+        }
+
+
+        document.onmouseup=function(){
+            flag_op=false;
+
+
+        }
+        return false;
+
+    }
+
+    function slide_opcity(e){
+
+        left_now_op=e.clientX;
+
+        cha_op=left_now_op-slide_item_op_left;
+        if(cha_op>=0&&cha_op<=250){
+            slide_bar_op.style.left=cha_op+"px";
+
+            right_box.style.opacity=cha_op/250;
+        }else if(cha_op<0){
+            slide_bar_op.style.left=0+"px";
+            right_box.style.opacity=0;
+        }else{
+            slide_bar_op.style.left=250+"px";
+            right_box.style.opacity=1;
+        }
+    }
+    /*改变元素透明度方法end*/
+</script>
+</html>

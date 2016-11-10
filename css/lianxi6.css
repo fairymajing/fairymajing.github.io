@@ -1,0 +1,105 @@
+body{
+    background-image: url(../img/biaodan.png);
+    background-size:cover;
+
+}
+.photoWall{
+    width: 1024px;
+    height: 600px;
+    margin: 0 auto;
+
+    position: relative;
+}
+.image{
+    width: 250px;
+    height: 170px;
+    border:20px solid #fff;
+    box-shadow: #999 15px 15px 15px;
+}
+.image1{
+    position: absolute;
+    top:50px;
+    left: 50px;
+    transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -webkit-transform:rotate(30deg);
+}
+.image2{
+    position: absolute;
+    top:150px;
+    left: 150px;
+    transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -webkit-transform:rotate(-30deg);
+}
+.image3{
+    position: absolute;
+    top:250px;
+    left: 250px;
+    transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -webkit-transform:rotate(40deg);
+}
+.image4{
+    position: absolute;
+    top:120px;
+    left: 450px;
+    transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -webkit-transform:rotate(-40deg);
+}
+.image5{
+    position: absolute;
+    top:70px;
+    left: 550px;
+    transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -webkit-transform:rotate(10deg);
+}
+.image6{
+    position: absolute;
+    top:270px;
+    left: 450px;
+    transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+}
+.image7{
+    position: absolute;
+    top:370px;
+    left: 50px;
+    transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+}
+.image8{
+    position: absolute;
+    top:70px;
+    left: 750px;
+    transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    -webkit-transform:rotate(50deg);
+}
+.image9{
+    position: absolute;
+    top:170px;
+    left: 750px;
+    transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -webkit-transform:rotate(-20deg);
+}
+.image10{
+    position: absolute;
+    top:370px;
+    left: 750px;
+    transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -webkit-transform:rotate(20deg);
+}
+.image:hover{
+
+    transform: rotate(0deg);
+    transform:scale(1.5);
+    z-index: 999;
+    transition:1s;
+}

@@ -2,14 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>叶片转换</title>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .wrap{
+            position: relative;
+            top: 10px;
+            right: 650px;
+            float: right;
+            background-color: #999;
+
+        }
+        .box{
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #ccc;
+            transform-origin:100px 450px;
+        }
+        .center{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            top: 370px;
+            right: 650px;
+            border-radius: 100px;
+        }
+        .box_one{
+            transform:rotate(45deg);
+            background-color: plum;
+        }
+        .box_two{
+            transform:rotate(90deg);
+            background-color: yellow;
+        }
+        .box_three{
+            transform:rotate(135deg);
+            background-color: firebrick;
+        }
+        .box_four{
+            transform:rotate(180deg);
+            background-color: cornflowerblue;
+        }
+        .box_five{
+            transform:rotate(-135deg);
+            background-color: tan;
+        }
+        .box_six{
+            transform:rotate(-90deg);
+            background-color: darkseagreen;
+        }
+        .box_se{
+            transform:rotate(-45deg);
+            background-color: olivedrab;
+        }
+        .box_nine{
+            transform:rotate(0deg);
+            background-color: peachpuff;
+        }
+        .dong{
+
+            position: absolute;
+            top: 50px;left:-1100px;
+            width: 500px;
+            height: 800px;
+        }
+        .title{
+            width: 300px;
+            height: 200px;
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+<div class="wrap" id="wrap">
+    <div class="box box_one"></div>
+    <div class="box box_two"></div>
+    <div class="box box_three"></div>
+    <div class="box box_four"></div>
+    <div class="box box_five"></div>
+    <div class="box box_six"></div>
+    <div class="box box_se"></div>
+    <div class="box box_nine"></div>
+</div>
+<div class="center" id="center"></div>
+<div class="title">
+    <span >点击叶片试试</span>
+</div>
 </body>
+<script type="text/javascript">
+    var wrap=document.getElementById("wrap");
+    var boxes=wrap.getElementsByTagName("div");
+
+    wrap.onclick=function(e){
+        e.target.style.cssText = "position:absolute;left:-1260px;top:300px;transform:scale(2);width:600px transition:2s; height:600px;"
+        for(var i=0;i<boxes.length;i++){
+            if(boxes[i]!=e.target){
+                boxes[i].style.cssText="";
+            }
+        }
+    }
+
+
+
+
+</script>
+
+
 </html>

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面转换</title>
+</head>
+<style type="text/css">
+    *{
+        padding: 0px;
+        margin:0px;
+    }
+    body{
+        background-color: darkseagreen;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .wrap{
+        width: 1024px;
+        margin: 0px auto;
+    }
+    .ad_div{
+        margin: 100px auto;
+        width: 600px;
+        height: 350px;
+        position: relative;
+        border:5px solid #ccc;
+    }
+
+    .img_div img{
+        width: 600px;
+        height: 350px;
+        position: absolute;
+        display: none;
+    }
+    .num{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+
+    }
+    .num span{
+        display: block;
+        float:left;
+        width:30px;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+        color:#fff;
+        background: #ccc;
+        border: 1px solid #fff;
+        border-right:none;
+        cursor:pointer;
+    }
+    .ad_div .img_action{
+        display: block;
+    }
+    .num .span_action{
+        background-color: #999;
+    }
+</style>
+<body>
+<div class="wrap">
+    <div class="ad_div">
+        <div class="img_div" id="img_div">
+            <img src="src/11.jpg" class="img_action">
+            <img src="src/12.jpg">
+            <img src="src/13.jpg">
+            <img src="src/14.jpg">
+        </div>
+        <div class="num" id="num">
+            <span class="span_action">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    var current=0;
+    var img_div=document.getElementById("img_div");
+    var img=img_div.getElementsByTagName("img");
+    var num=document.getElementById("num");
+    var span=num.getElementsByTagName("span");
+
+    var interval = setInterval(function(){
+        change();
+    },1000);
+
+    for(var i=0;i<span.length;i++){
+        span[i].onmouseover = (function(i){
+            return function(){
+                if(interval != null){
+                    clearInterval(interval);
+                }
+                change(i);
+            }
+        })(i);
+
+        span[i].onmouseout = function(){
+            interval = setInterval(function(){
+                change();
+            },1000);
+        }
+    }
+
+    function change(num){
+
+        img[current].className="";
+        span[current].className="";
+        if(num!=null){
+            current=num;
+        }else{
+            current++;
+
+        }
+        if(current>3){
+            current=0;
+        }
+        img[current].className="img_action";
+        span[current].className="span_action";
+    }
+
+</script>
+</html>

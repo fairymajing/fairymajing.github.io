@@ -1,88 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>微信场景页</title>
-    <link rel="stylesheet" type="text/css" href="css/lianxi3.css"/>
-    <script src="js/jquery-3.1.0.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/lianxi3.js" type="text/javascript" charset="utf-8"></script>
-</head>
-<body>
-<div class="content">
-    <!--*******************************************page1*************************************************-->
-    <div class="page page1">
-        <img src="src/images/page1-bg.png"  class="page1-bg"/>
-        <img src="src/images/page1-nh.png" class="page1-nh"/>
-        <img src="src/images/page1-1.png" class="page1-1"/>
-        <img src="src/images/page1-dxsh.png" class="page1-dxsh"/>
-        <img src="src/images/page1-2.png" class="page1-2"/>
-        <img src="src/images/page1-hua.png" class="page1-hua"/>
-        <img src="src/images/page1-hua1.png" class="page1-hua1"/>
-        <img src="src/images/page1-welcome.png" class="page1-welcome"/>
-    </div>
-    <!--*******************************************page2*************************************************-->
-    <div class="page page2">
-        <img src="src/images/page2-study.jpg" class="page2-background"/>
-        <img src="src/images/page2-clock.png" class="page2-clock" onclick="buttonClick1(this)"/>
-        <img src="src/images/page2-地球.png" class="page2-earth"/>
-        <img src="src/images/page2-fly.png" class="page2-plane"/>
-        <img src="src/images/page2-wave.png" class="page2-wave"/>
-        <img src="src/images/page2-board.png" class="page2-board"/>
-        <img src="src/images/page2-books.png" class="page2-books"/>
-        <img src="src/images/page2-地球仪.png" class="page2-tellurin"/>
-        <img src="src/images/page2-caculator.png" class="page2-caculator"/>
-        <div class="page2-box">知识让我<p>畅游世界</p></div>
-    </div>
-    <!--*******************************************page3*************************************************-->
-    <div class="page page3">
-        <img src="src/images/page3-4.png" class="page3-shoulashou"/>
-        <img src="src/images/page3-3.png" class="page3-earth"/>
-        <img src="src/images/page3-2.png" class="page3-school"/>
-        <img src="src/images/page3-1.png" class="page3-black"/>
-    </div>
-    <!--*******************************************page4*************************************************-->
-    <div class="page page4">
-        <img src="src/images/page4-bg1.jpg"class="page4-bg1"/>
-        <img src="src/images/page4-text.png" class="page4-text"/>
-        <img src="src/images/page4-text1.png" class="page4-text1"/>
-        <!--场景2-->
-        <img src="src/images/page4-bg.jpg"class="page4-bg"/>
-        <img src="src/images/page4-person1.png"class="page4-person1"/>
-        <img src="src/images/page4-person2.png"class="page4-person2"/>
-        <img src="src/images/page4-music.png" class="page4-music"/>
-    </div>
-    <!--*******************************************page5*************************************************-->
-    <div class="page page5">
-        <img src="src/images/page5-bg.jpg" class="page5-bg" />
-        <img src="src/images/page5-boy.png" class="page5-boy" />
-        <img src="src/images/page5-girl.png" class="page5-girl" />
-        <img src="src/images/page5-heart.png" class="page5-heart" />
-        <img src="src/images/page5-cat_head.png" class="page5-cat_head" />
-        <img src="src/images/page5-cat_body.png" class="page5-cat_body" />
-        <img src="src/images/page5-text.png" class="page5-text"/>
-    </div>
-    <!--*******************************************page6*************************************************-->
-    <div class="page page6">
-        <img src="src/images/page6-qwe.png" class="page6-beijing"/>
-        <img src="src/images/page6-qaawe.png" class="page6-yanjing"/>
-        <img src="src/images/page6-zc.png"  class="page6-ipad" onclick="buttonClick2(this)"/>
-        <img src="src/images/page6-dsds.png" class="page6-dianwo"/>
-        <img src="src/images/page6-7fsef.png" class="page6-daipad"/>
-        <img src="src/images/page6-dasda.png" class="page6-wenzi"/>
-    </div>
-    <!--*******************************************page7*************************************************-->
-    <div class="page page7">
-        <img src="src/images/page7-end.jpg" class="page7-cloud"/>
-        <img src="src/images/page7-ball1.png" class="page7-ball1"/>
-        <img src="src/images/page7-ball2.png" class="page7-ball2"/>
-        <img src="src/images/page7-ball3.png" class="page7-ball3"/>
-        <img src="src/images/page7-text.png"class="page7-text"/>
-    </div>
-</div>
-<!--*******************************************page7*************************************************-->
-<img src="src/images/musicBtn.png" class="music" onclick="playPause(this)"/>
-<audio id="ad" src="src/Cyanic.mp3" autoplay="autoplay"></audio>
-<img src="src/images/arrow-up.png" class="up"/>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>微信场景页</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-2.1.1.min.js"type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.touchSwipe.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<div class="content">
+<!--*******************************************page1*************************************************-->
+			<div class="page page1">
+				<img src="src/images/page1-bg.png"  class="page1-bg"/>
+				<img src="src/images/page1-nh.png" class="page1-nh"/>
+                <img src="src/images/page1-1.png" class="page1-1"/>
+			    <img src="src/images/page1-dxsh.png" class="page1-dxsh"/>
+				<img src="src/images/page1-2.png" class="page1-2"/>
+				<img src="src/images/page1-hua.png" class="page1-hua"/>
+				<img src="src/images/page1-hua1.png" class="page1-hua1"/>
+				<img src="src/images/page1-welcome.png" class="page1-welcome"/>
+			</div>
+<!--*******************************************page2*************************************************-->		
+			<div class="page page2">
+			    <img src="src/images/page2-study.jpg" class="page2-background"/>
+			    <img src="src/images/page2-clock.png" class="page2-clock" onclick="buttonClick1(this)"/>
+			    <img src="src/images/page2-地球.png" class="page2-earth"/>
+			    <img src="src/images/page2-fly.png" class="page2-plane"/>
+			    <img src="src/images/page2-wave.png" class="page2-wave"/>
+			    <img src="src/images/page2-board.png" class="page2-board"/>
+			    <img src="src/images/page2-books.png" class="page2-books"/>
+			    <img src="src/images/page2-地球仪.png" class="page2-tellurin"/>
+			    <img src="src/images/page2-caculator.png" class="page2-caculator"/>
+			    <div class="page2-box">知识让我<p>畅游世界</p></div>			          			
+			</div>
+<!--*******************************************page3*************************************************-->			
+			<div class="page page3">
+			    <img src="src/images/page3-4.png" class="page3-shoulashou"/>
+			    <img src="src/images/page3-3.png" class="page3-earth"/>
+			    <img src="src/images/page3-2.png" class="page3-school"/>
+			    <img src="src/images/page3-1.png" class="page3-black"/>
+			</div>
+<!--*******************************************page4*************************************************-->						
+			<div class="page page4">
+			    <img src="src/images/page4-bg1.jpg"class="page4-bg1"/>
+			    <img src="src/images/page4-text.png" class="page4-text"/>
+			    <img src="src/images/page4-text1.png" class="page4-text1"/>
+								<!--场景2-->			
+			    <img src="src/images/page4-bg.jpg"class="page4-bg"/>
+			    <img src="src/images/page4-person1.png"class="page4-person1"/>
+			    <img src="src/images/page4-person2.png"class="page4-person2"/>
+		        <img src="src/images/page4-music.png" class="page4-music"/>
+			</div>
+<!--*******************************************page5*************************************************-->						
+			<div class="page page5">
+			    <img src="src/images/page5-bg.jpg" class="page5-bg" />
+			    <img src="src/images/page5-boy.png" class="page5-boy" />
+			    <img src="src/images/page5-girl.png" class="page5-girl" />
+			    <img src="src/images/page5-heart.png" class="page5-heart" />
+			    <img src="src/images/page5-cat_head.png" class="page5-cat_head" />
+			    <img src="src/images/page5-cat_body.png" class="page5-cat_body" />
+			    <img src="src/images/page5-text.png" class="page5-text"/>
+			</div>
+<!--*******************************************page6*************************************************-->						
+			<div class="page page6">
+		        <img src="src/images/page6-qwe.png" class="page6-beijing"/>
+		        <img src="src/images/page6-qaawe.png" class="page6-yanjing"/>
+		        <img src="src/images/page6-zc.png"  class="page6-ipad" onclick="buttonClick2(this)"/>
+		        <img src="src/images/page6-dsds.png" class="page6-dianwo"/>
+		        <img src="src/images/page6-7fsef.png" class="page6-daipad"/>
+		        <img src="src/images/page6-dasda.png" class="page6-wenzi"/>
+			</div>
+
+		</div>
+
+		<img src="src/images/musicBtn.png" class="music" onclick="playPause(this)"/>
+		<audio id="ad" src="src/Cyanic.mp3" autoplay="autoplay"></audio>
+		<img src="src/images/arrow-up.png" class="up"/>
+	</body>
 </html>

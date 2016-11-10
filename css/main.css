@@ -1,0 +1,545 @@
+*{
+	margin: 0px;padding: 0px;
+}
+.content{
+	width: 100%;
+	height: 700%;
+	position: absolute;	
+	/*background-color: black;*/
+}
+.page{
+	position: relative;
+	width: 100%;
+	height: 14.3%;
+}
+/****************************************page1******************************************************************/
+.page1 img{
+	position: absolute;
+}
+
+.page1-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.page1-nh{
+	width: 0Px;
+	height: 0px;
+	bottom: 50px;
+	right: 10px;
+}
+.page1-1{
+	width: 30px;
+	height: 80px;
+	top: 140px;
+	animation: page1-shake 2s infinite;
+}
+
+
+
+.page1-2{
+	width: 30px;
+	height: 80px;
+    right: 80px;
+	top: 100px;
+	animation: page1-shake 2s infinite;
+}
+
+.page1-hua{
+	width: 40px;
+	height: 50px;
+	top:250px;
+	left: 70px;
+	animation: page1-xuanzhuan 2s infinite;
+}
+
+.page1-hua1{
+	width: 40px;
+	height: 40px;
+	bottom: 30px;
+	right: 80px;
+	animation: page1-xuanzhuan 2s infinite;
+}
+
+.page1-welcome{
+	width: 220px;
+	height: 50px;
+	top: 10px;
+	animation: page1-fangda 2s infinite;
+}
+
+
+.page1-dxsh{
+	width: 270px;
+	height: 150px;
+	top: 20px;
+	animation: page1-fangda 2s infinite;
+}
+
+
+@keyframes page1-shake{
+	0%{}
+	25%{transform: rotate(-30deg);}
+	50%{transform: rotate(0deg);}
+	75%{transform: rotate(30deg);}
+	100%{transform: rotate(0deg);}
+	
+}
+
+@keyframes page1-xuanzhuan{
+	from{}
+	to{transform: rotate(360deg);}
+}
+
+@keyframes page1-fangda{
+	0%{}
+	50%{transform: scale(1.2);}
+	100%{transform: scale(1);}
+}
+
+/****************************************page2******************************************************************/
+.page2-box{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	margin-top:100px;
+	margin-left: 40px;
+	font-family: "bodoni mt black";
+	font-size: 23px;
+	color:dimgrey;
+	display: none;
+	animation: leftandright 1.5s infinite;
+}
+@keyframes leftandright{
+	0%{}
+	50%{transform: scale(1.2);}
+	100%{transform: scale(1);}
+}
+.page2{
+    background-color: lightskyblue;
+}
+.page2 img{
+	position: absolute;
+}
+.page2-background{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.page2-clock{
+	width: 45%;
+	height: 30%;
+	top: 35px;
+	left: 28%;
+	display: none;
+	animation: xuanzhuan 2s infinite linear;
+}
+@keyframes xuanzhuan{
+	from{}
+	to{transform: rotate(360deg);}
+}
+.page2-earth{
+	width: 0;
+	height: 0;
+	top: 0;
+	left: 25%;
+	display: none;
+}
+.page2-wave
+{
+	width: 100%;
+	height: 30%;
+	bottom: -5%;
+	display: none;
+	animation:upanddown 1.5s infinite ;
+}
+@keyframes upanddown{
+	0%{}
+	50%{bottom: 5%;}
+	100%{bottom: 3%;}
+}
+.page2-plane{
+	width: 50%;
+	height: 30%;
+	right: 0;
+	top: 5%;
+	display: none;
+}
+.page2-board{
+	width: 20%;
+	top: 5%;
+	left: 0;
+	display: none;
+}
+.page2-books{
+	width: 30%;
+	height: 30%;
+	top: 40%;
+	left: 35%;
+	display: none;
+}
+.page2-tellurin{
+	width: 30%;
+	height: 30%;
+	top: 40%;
+	left: 5%;
+	display: none;
+}
+.page2-caculator{
+	width: 30%;
+	height: 30%;
+	top: 40%;
+	right: 5%;
+	display: none;
+}
+/****************************************page3******************************************************************/
+.page3{
+	background-color: turquoise;
+}
+
+.page3 img{
+	position: absolute;
+
+}
+
+.page3-shoulashou{
+	height: 50%;
+	width: 100%;
+	bottom: 0px;
+	display: none;
+	animation: page3-updown 2s infinite linear;
+}
+
+.page3-black{
+	bottom:  0px;
+	left: 0px;
+	width: 100%;
+	height: 60%;
+	display: none;
+	animation: page3-shake 2s infinite linear;
+}
+
+.page3-earth{
+	top: 10%;
+	width: 80%;
+	height: 44%;
+	left: 10%;
+	display: none;
+	animation: page3-xuanzhuan 10s infinite linear;
+}
+	
+
+
+.page3-school{
+	width: 100%;
+	height: 80%;
+	left: 0px;
+	top: 0px;
+	display: none;
+	animation: page3-fangda 2s infinite linear;
+}
+
+@keyframes page3-xuanzhuan{
+	from{}
+	to{transform: rotate(360deg);}
+}
+
+@keyframes page3-updown{
+	0%{}
+	50%{bottom: 50px;}
+	100%{}
+}
+@keyframes page3-fangda{
+	0%{}
+	50%{transform: scale(0.9);}
+	100%{}
+}
+@keyframes page3-shake{
+	0%{}
+	25%{transform: rotate(5deg);}
+	50%{}
+	75%{transform: rotate(-5deg);}
+	100%{}
+	
+}
+/****************************************page4******************************************************************/
+.page4 img{
+	position: absolute;
+}
+
+.page4-bg1{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+
+}
+
+.page4-text{
+	width:100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.page4-text1{
+	width: 60%;
+	height: 30%;
+	bottom: 5%;
+	right:5%;
+	display: none;
+	animation: page4-shake2 1s infinite;
+}
+@keyframes page4-shake2{
+	0%{}
+	50%{transform: scale(0.9);}
+	100%{transform: scale(1);}
+}
+.page4-bg{
+	position:relative ;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.page4-person1{
+	width: 0%;
+	height: 0%;
+	left: -30px;
+	bottom: 0px;
+	animation: trunright 1s infinite;
+	display: none;
+}
+@keyframes trunright{
+	0%{}
+	50%{left:0px}
+	100%{left: 15px;}
+}
+.page4-person2{
+	width: 0%;
+	height: 0%;
+	right: -30px;
+	bottom: 0px;
+	display: none;
+	animation: turnleft 1s infinite;
+}
+@keyframes turnleft{
+	0%{}
+	50%{right:0px}
+	100%{right: 15px;}
+}
+.page4-music{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+	animation: page4-yaobai 1s infinite;
+}
+@keyframes page4-yaobai{
+	0%{}
+	50%{transform: scale(0.9);}
+	100%{transform: scale(1);}
+}
+/****************************************page5******************************************************************/
+.page5 img{
+	position: absolute;
+}
+.page5-bg{
+	width:100%;
+	height:100%;
+	animation: page4-fangda2 5s infinite;
+	display: none;
+}
+.page5-boy{
+	width:20%;
+	height:60%;
+	left:10%;
+	bottom:5%;
+	animation: page5-fangda 4s infinite;
+
+	display: none;
+}
+.page5-girl{
+	width:20%;
+	height:58.1%;
+	right:10%;
+	bottom:5%;
+	animation: page5-fangda 4s infinite;
+
+	display: none;
+}
+.page5-heart{
+	width:20%;
+	height:15%;
+	top:24%;
+	left:41%;
+	animation: page5-fangda 1.5s infinite;
+	display: none;
+}
+.page5-cat_head{
+	width:8%;
+	height:8%;
+	left:46%;
+	bottom:12.6%;
+	animation: page5-shake 1.5s infinite;
+}
+.page5-cat_body{
+	width:10%;
+	height:10%;
+	left:47.4%;
+	bottom:5%;
+}
+.page5-text{
+	width: 80%;
+	height: 30%;
+	left: 0px;
+	top: 0px;
+	animation: page5-zuoyou 1s infinite;
+}
+@keyframes page5-fangda{
+	0%{}
+	50%{transform: scale(0.8);}
+	100%{transform: scale(1);}
+}
+@keyframes page5-fangda2{
+	0%{}
+	50%{transform: scale(1);}
+	100%{transform: scale(1.2);}
+}
+
+@keyframes page5-shake{
+	0%{}
+	50%{transform: rotate(-15deg);}
+}
+@keyframes page5-zuoyou{
+	0%{}
+	50%{transform: rotate(-15deg);}
+	100%{transform: rotate(15deg);}
+}
+
+
+
+
+/****************************************page6******************************************************************/
+.page6 img{
+	position: absolute;
+}
+.page6-beijing{
+	width: 100%;
+	height: 100%;
+}
+.page6-yanjing{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	animation: yanjing 2s infinite;
+}
+@keyframes yanjing{
+	0%{}
+	25%{transform: rotate(-5deg);}
+	50%{transform: rotate(0deg);}
+	75%{transform: rotate(5deg);}
+    100%{transform: rotate(0deg);}
+}
+.page6-ipad{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.page6-daipad{
+	width: 100%;
+	height:100% ;
+	
+	display: none;
+}
+
+.page6-wenzi{
+	width: 100%;
+	height: 100%;
+	display: none;
+	animation: fangda 1s infinite linear;
+}
+@keyframes fangda{
+	0%{}
+	50%{transform: scale(1.2);}
+	100%{transform: scale(1);}
+}
+.page6-dianwo{
+	top: 20%;
+	right: 1%;
+}
+
+/****************************************page7******************************************************************/
+.page7 img{
+	position: absolute;
+}
+.page7-cloud{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.page7-ball1{
+	width: 70%;
+	height: 50%;
+	bottom: 0%;
+	left: 15%;
+	/*display: none;*/
+
+}
+.page7-ball2{
+	width: 40%;
+	height:30%;
+	top: 60%;
+	left:-5%;
+	/*display: none;*/
+}
+.page7-ball3{
+	width:35%;
+	height: 25%;
+	top:60%;
+	right: 0;
+	/*display: none;*/
+}
+.page7-text{
+	width: 100%;
+	height: 70%;
+	top: 10%;
+	left: 0%;
+	display: none;
+}
+
+/*****************************************************************************************************/
+.music{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 40px;
+	height: 40px;
+	animation: xuanzhuan 2s infinite;
+}
+@keyframes xuanzhuan{
+	from{}
+	to{transform: rotate(360deg);}
+}
+
+.up{
+	position: absolute;
+	bottom: 3%;
+	width: 20%;
+	left: 40%;
+	animation:  updown 2s infinite;
+}
+@keyframes updown{
+	0{}
+	50%{bottom: 5%;}
+	100%{bottom: 3%;}
+}
+
+
+
+
